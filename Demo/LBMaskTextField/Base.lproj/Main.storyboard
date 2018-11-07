@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bxx-S0-M1x">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LBMaskTextField" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telephone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="buK-r2-vqC">
+                                <rect key="frame" x="60" y="106" width="255" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Document" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WT0-Pw-na3">
+                                <rect key="frame" x="60" y="300" width="255" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Designable" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBD-8n-q52" customClass="LBMaskedTextField" customModule="LBMaskTextField" customModuleProvider="target">
+                                <rect key="frame" x="60" y="494" width="255" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="textMask" value="+55 (##) ####-####"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="textPlaceholder" value="Designable"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imT-vE-XGl">
+                                <rect key="frame" x="110" y="608" width="155" height="30"/>
+                                <state key="normal" title="Print Values"/>
+                                <connections>
+                                    <action selector="printValues:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6Y-eZ-eLz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="buK-r2-vqC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="0SV-rm-ccl"/>
+                            <constraint firstItem="EBD-8n-q52" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="FBw-5w-GTA"/>
+                            <constraint firstItem="imT-vE-XGl" firstAttribute="top" secondItem="EBD-8n-q52" secondAttribute="bottom" constant="84" id="T0d-Nh-shk"/>
+                            <constraint firstItem="buK-r2-vqC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="UqL-5g-iSD"/>
+                            <constraint firstItem="imT-vE-XGl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="YsO-T3-gJO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="imT-vE-XGl" secondAttribute="trailing" constant="110" id="iOO-ef-I3i"/>
+                            <constraint firstItem="WT0-Pw-na3" firstAttribute="top" secondItem="buK-r2-vqC" secondAttribute="bottom" constant="164" id="ihD-bV-pHc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="buK-r2-vqC" secondAttribute="trailing" constant="60" id="jI7-MM-yDM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EBD-8n-q52" secondAttribute="trailing" constant="60" id="jxk-Ja-RrX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WT0-Pw-na3" secondAttribute="trailing" constant="60" id="kyg-Mx-hG2"/>
+                            <constraint firstItem="WT0-Pw-na3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="xk0-qk-VwW"/>
+                            <constraint firstItem="EBD-8n-q52" firstAttribute="top" secondItem="WT0-Pw-na3" secondAttribute="bottom" constant="164" id="zOA-ZN-ygm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="designable" destination="EBD-8n-q52" id="yaz-bq-Bbi"/>
+                        <outlet property="document" destination="WT0-Pw-na3" id="YYg-JP-rtd"/>
+                        <outlet property="telephone" destination="buK-r2-vqC" id="fyp-zD-8kO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s6P-jC-B0h">
+            <objects>
+                <viewController id="Bxx-S0-M1x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LzL-Y1-P8W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P24-bz-3Jz" customClass="LBMaskedTextField" customModule="LBMaskTextField" customModuleProvider="target">
+                                <rect key="frame" x="54" y="318" width="266" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="textMask" value="###"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Eog-UF-JMK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M74-iN-7f0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="419.64017991004499"/>
+        </scene>
+    </scenes>
+</document>
