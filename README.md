@@ -17,7 +17,7 @@ Symbols:
 
   ### - Using STORYBOARD
       * Add a textField on your storyboard
-         https://image.ibb.co/nw3e5A/Screen-Shot-2018-11-07-at-14-28-33.png
+         ![alt text](https://image.ibb.co/nw3e5A/Screen-Shot-2018-11-07-at-14-28-33.png)
 
       * Select the textField, click on Identity Inspector and change class to LBMaskedTextField
          ![](https://image.ibb.co/cEFFdV/Screen-Shot-2018-11-07-at-14-30-14.png)
